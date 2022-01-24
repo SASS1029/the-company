@@ -31,7 +31,7 @@
                       <label for="username">User Name</label>
                       <input type="text" name="username"  id="username" class="form-control mb-2" maxlength="15" required>
                       <label for="password">Password</label>
-                      <input type="password" name="password"  id="password" class="form-control mb-2" mixlength="8" required>
+                      <input type="password" name="password"  id="password" class="form-control mb-2" minlength="8" required>
 
                       <button type="submit" class="btn btn-success w-100" name="register">REGISTER</button>
                   </form>                                              

@@ -8,6 +8,7 @@ $user_obj = new User;
 //get the user id from the URL
 $user_id = $_GET['user_id'];
 //$user_id = 4; example
+
 $user = $user_obj->getUser($user_id);
 //$user contains the information of user # 4
 //$user is an associative array
@@ -35,9 +36,8 @@ $user = $user_obj->getUser($user_id);
               <form action="../actions/edit-user.php" method="post">
                 <input type="hidden" name="user_id" value="<?= $user['id']?>">
 
-                
                 <label for="first-name">First Name</label>
-                <input type="text" name="first_name"  id="first-name" class="form-control mb-2" value="<?= $user['first_name'] ?>" required>
+                <input type="text" name="first_name"  id="first-name" class="form-control mb-2" value="<?= $user['first_name'] ?>" required autofocus>
 
                 <label for="last-name">Last Name</label>
                 <input type="text" name="last_name" id="last-name" class="form-control mb-2"  value="<?= $user['last_name'] ?>"required>

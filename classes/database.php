@@ -1,5 +1,5 @@
 <?php
-
+  // the_company(PHP + MYSQL)
 
 
     class Database {
@@ -13,6 +13,7 @@
             $this->conn = new mysqli($this->server_name, $this->username, $this->password, $this->db_name);
             // protected ＄conn which holds the connection to the database.
             //use $this->conn each time you interact with the database.
+            // 引数を含めたインスタンスを直接__coustructに組み込むことによって色々省略している
 
             if($this->conn->connect_error) {
                 die("Unable to connect to database" . $this->db_name. ":" . $this->conn->connect_error);
@@ -22,7 +23,7 @@
             
      }
         //Delete later
-     $db = new Database;
+     //$db = new Database;
     
 
      //何もclassesのブラウザに載っていなかったら成功

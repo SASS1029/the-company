@@ -6,7 +6,7 @@ include "../classes/user.php";
 $user = new User;
 $user_list = $user->getAllUsers();
 //$user_list = $result
-//
+//$user_list contains all the records from the users table
 
 
 
@@ -42,15 +42,10 @@ $user_list = $user->getAllUsers();
                 </tr>
             </thead>
             <tbody class="lead">
-                <?php
-                    while($user = $user_list->fetch_assoc()) {
-
-                  
-
-                ?>
+                <?php  while($user = $user_list->fetch_assoc()): ?>
             <tr>
                 <td><?php echo $user['id'] ?></td>
-                <td><?= $user['first_name'] ?></td> <!--same meaning --> 
+                <td><?= $user['first_name'] ?></td> <!--same meaning (php echo -> =) --> 
                 <td><?= $user['last_name'] ?></td>
                 <td><?= $user['username'] ?></td>
                 <td>
@@ -59,9 +54,7 @@ $user_list = $user->getAllUsers();
                 </td>
                
             </tr>
-            <?php
-              }
-            ?>
+            <?php endwhile ?>  <!-- while(){  }の代わり  -->
             </tbody>
         </table>
 </main>
